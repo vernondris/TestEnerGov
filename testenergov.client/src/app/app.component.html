@@ -1,0 +1,76 @@
+
+<br>
+<br>
+
+<div id="tableLabel">
+  <label for="cars">Manager:</label>
+  <select id='manager' name='manager' (change)="selectManager($event)">
+    <option *ngFor="let datax of this.service.manager" value="{{ datax.id }}">
+      {{ datax.firstName }}
+    </option>
+  </select>
+</div>
+
+<br>
+
+<div id="tableLabel" [hidden]="HideMainPage">
+  <table>
+    <thead>
+      <tr>
+        <th>Employee Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let datax of this.service.employee">
+        <td>{{ datax.id }}</td>
+        <td>{{ datax.firstName }}</td>
+        <td>{{ datax.lastName }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <button type="button" (click)="addEmployee()">Add Employee</button>
+</div>
+
+<form id="tableLabel" (submit)="onSubmit($event)" [hidden]="!HideMainPage">
+  <table>
+    <tr>
+      <td>
+        <span for="fname">First Name:</span>
+      </td>
+      <td>
+        <input type="text" name="fname" placeholder="Type your firstname">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span for="lname">Last Name:</span>
+      </td>
+      <td>
+        <input type="text" name="lname" placeholder="Type your lastname">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="cars">Roles:</label>
+      </td>
+      <td>
+        <select name="cars" id="cars" multiple (change)="selectRoles($event)">
+          <option *ngFor="let datax of this.service.roleMasterFile" value="{{ datax.id }}">{{ datax.name }}</option>
+        </select>
+      </td>
+    </tr>
+  </table>
+  <br><br>
+  <button>Submit</button> 
+</form>
+<br>
+<div id="tableLabel" [hidden]="!HideMainPage">
+  <button (click)="cancelEmployee()">Cancel</button>
+</div>
+
+
+
+

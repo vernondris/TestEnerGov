@@ -1,0 +1,13 @@
+﻿ INSERT INTO [testDb].[dbo].[RoleMasterFile] ( Name) VALUES ('SENIOR DIRECTOR');
+  
+ INSERT INTO [testDb].[dbo].[RoleMasterFile] ( Name) VALUES ('DIRECTOR');
+
+ INSERT INTO [testDb].[dbo].[RoleMasterFile] (Name) VALUES ('IT');
+
+ INSERT INTO [testDb].[dbo].[RoleMasterFile] (Name) VALUES ('SUPPORT');
+
+ INSERT INTO [testDb].[dbo].[RoleMasterFile] ( Name) VALUES ('ACCOUNTING');
+
+ INSERT INTO [testDb].[dbo].[RoleMasterFile] (Name) VALUES ('ANALYST');
+
+ INSERT INTO [testDb].[dbo].[RoleMasterFile] (Name) VALUES ( 'SALES');

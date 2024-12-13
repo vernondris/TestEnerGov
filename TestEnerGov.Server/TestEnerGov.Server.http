@@ -1,0 +1,6 @@
+@TestEnerGov.Server_HostAddress = http://localhost:5200
+
+GET {{TestEnerGov.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
